@@ -18,13 +18,13 @@ int main() {
 	{
 		double result = 0;
 
-		if (x <= -R)
-			result = x + R;
+		if (x <= -(R / sqrt(2)))
+			result = x + R * sqrt(2);
 
-		else if (x >= -R && x <= 0)
+		else if (x > -(R / sqrt(2)) && x <= 0)
 			result = sqrt(pow(R, 2) - pow(x, 2));
 
-		else if (x >= 0 && x <= 6)
+		else if (x > 0 && x < 6)
 			result = -(R / 6) * x + R;
 
 		else
